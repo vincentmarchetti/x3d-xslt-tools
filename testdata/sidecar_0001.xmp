@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rdf:RDF    xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+            xmlns:dc='http://purl.org/dc/elements/1.1/'
+            xmlns:xmp='http://ns.adobe.com/xap/1.0/'>
+
+<rdf:Description rdf:about='https://kshell.com/sgs/example_uri_0001/'>
+<dc:description>
+<rdf:Alt>
+<rdf:li xml:lang='en'>VRML visualization</rdf:li>
+</rdf:Alt>
+</dc:description>
+<dc:format>model/x3d-vrml</dc:format>
+<dc:rights/>
+<dc:title>
+<rdf:Alt>
+<rdf:li xml:lang='en'>l-bracket_20120725.134815</rdf:li>
+</rdf:Alt>
+</dc:title>
+<dc:creator>
+<rdf:Seq>
+<rdf:li>vmarchetti@kshell.com</rdf:li>
+</rdf:Seq>
+</dc:creator>
+<xmp:CreateDate>2021-2-10</xmp:CreateDate>
+</rdf:Description>
+</rdf:RDF>
