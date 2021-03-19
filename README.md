@@ -10,6 +10,7 @@ extracting list of strings from an MFString value encoded in XML
 
 ### demo_mfstring_encoding.xsl
 java net.sf.saxon.Transform  -s:testdata/mfstring_tests.xml -xsl:demo_mfstring_encoding.xsl
+java net.sf.saxon.Transform  -s:testdata/empty_singleton.xml -xsl:demo_mfstring_encoding.xsl
 
 ### xmp_metadata.xsl
 
@@ -20,3 +21,16 @@ X3D MetadataSet node encoded in XML.
 
 
 java net.sf.saxon.Transform   -s:testdata/sidecar_0001.xmp -xsl:convert_xmp_file.xsl
+
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<testcases>
+    <mfstring value="&quot;Tom&quot; &quot;\&quot;Jerry\&quot;&quot; &quot;\\Slashes\\&quot;"/>
+
+    <sfstrings>
+        <sfstring>Tom</sfstring>
+        <sfstring>"Jerry"</sfstring>
+        <sfstring>\Slashes\</sfstring>
+    </sfstrings>
+</testcases>
+```
