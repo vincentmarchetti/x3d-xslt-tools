@@ -3,10 +3,8 @@
 <xsl:stylesheet version="2.0" 
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
                 xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
-                xmlns:exsl="http://exslt.org/common"
-                extension-element-prefixes="exsl"
                 xmlns:sgs='http://standards.iso.org/iso/ts/23301/'
-                exclude-result-prefixes="rdf">
+                exclude-result-prefixes="rdf sgs">
 
 <xsl:import href="mfstring_encoding.xsl"/>
 
@@ -28,7 +26,7 @@ Example call when the XMP packet is enclosed in a 'sidecar' file.
                 
 <xsl:template name="xmp-metadata">
     <xsl:param name="descriptions"/>
-    <MetadataSet name="XMP" reference="https://www.iso.org/standard/75163.html">
+    <MetadataSet name="XMP" reference="https://www.adobe.com/products/xmp.html">
 
     <xsl:apply-templates mode='xmp-enc' select='$descriptions/*' />
     </MetadataSet>
@@ -165,7 +163,7 @@ Example call when the XMP packet is enclosed in a 'sidecar' file.
     </xsl:variable>
 
     <xsl:element name="{./@name}" namespace="{./@reference}">
-    <xsl:value-of select="$value/result/sfstring/text()"/>
+    <xsl:value-of select="string($value/sfstring)"/>
     </xsl:element>
 </xsl:template>
 

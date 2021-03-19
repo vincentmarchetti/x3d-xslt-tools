@@ -16,9 +16,7 @@
 
 
 <xsl:template match="rdf:RDF">
-    <MetadataSet>
     <xsl:apply-imports/>
-    </MetadataSet>
 </xsl:template>
 
 <xsl:template match="*">
