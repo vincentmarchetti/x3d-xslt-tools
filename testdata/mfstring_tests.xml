@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testcases>
-    <MFString value='"item1" "it\"em\"2" "it\\em\\3"'/>
+    <mfstring value='"item1" "it\"em\"2" "it\\em\\3"'/>    
+    <mfstring value='""'/>    
+    <mfstring value=''/>
+    <mfstring value="&quot;Tom&quot; &quot;\&quot;Jerry\&quot;&quot; &quot;\\Slashes\\&quot;"/>
     
-    <SFStrings>
-        <SFString>Tom</SFString>
-        <SFString>"Jerry"</SFString>
-        <SFString>\Slashes\</SFString>
-    </SFStrings>
-    <MFString value="&quot;Tom&quot; &quot;\&quot;Jerry\&quot;&quot; &quot;\\Slashes\\&quot;"/>
+    <sfstrings/>
+    
+    <sfstrings>
+        <sfstring/>
+    </sfstrings>
+    
+    <sfstrings>
+        <sfstring>Tom</sfstring>
+        <sfstring>"Jerry"</sfstring>
+        <sfstring>\Slashes\</sfstring>
+    </sfstrings>
+
 </testcases>
