@@ -80,11 +80,11 @@ with inner text of each X3D decoded SFString item from the MFString value
  -->
 <xsl:template name="decode-mfstring">
     <xsl:param name="mfstring"/>
-    <result>
+    
     <xsl:call-template name="recurs-mfstring">
         <xsl:with-param name="mfstring" select="$mfstring"/>
     </xsl:call-template>
-    </result>
+    
 </xsl:template>
 
 <xsl:template name="recurs-mfstring">

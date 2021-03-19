@@ -30,7 +30,7 @@
         <xsl:copy-of select="."/>
         
         <decoded-sfstrings>
-        <xsl:for-each select="$items/result/sfstring">
+        <xsl:for-each select="$items/sfstring">
         <decoded-sfstring><xsl:value-of select="string(.)"/></decoded-sfstring>
         </xsl:for-each>
         </decoded-sfstrings>
