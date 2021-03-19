@@ -9,18 +9,9 @@ Templates for representing lists of strings as a single X3D-XML encoding of an M
 extracting list of strings from an MFString value encoded in XML
 
 ### demo_mfstring_encoding.xsl
+```
 java net.sf.saxon.Transform  -s:testdata/mfstring_tests.xml -xsl:demo_mfstring_encoding.xsl
-java net.sf.saxon.Transform  -s:testdata/empty_singleton.xml -xsl:demo_mfstring_encoding.xsl
-
-### xmp_metadata.xsl
-
-
-### convert_xmp_file.xsl
-Demonstration script, imports templates from xmp_metadata.xsl to convert an XMP packet serialized to an XML file, to a
-X3D MetadataSet node encoded in XML.
-
-
-java net.sf.saxon.Transform   -s:testdata/sidecar_0001.xmp -xsl:convert_xmp_file.xsl
+```
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -34,3 +25,15 @@ java net.sf.saxon.Transform   -s:testdata/sidecar_0001.xmp -xsl:convert_xmp_file
     </sfstrings>
 </testcases>
 ```
+
+
+### xmp_metadata.xsl
+
+
+### convert_xmp_file.xsl
+Demonstration script, imports templates from xmp_metadata.xsl to convert an XMP packet serialized to an XML file, to a
+X3D MetadataSet node encoded in XML.
+
+
+java net.sf.saxon.Transform   -s:testdata/sidecar_0001.xmp -xsl:convert_xmp_file.xsl
+
