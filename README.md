@@ -26,6 +26,7 @@ java net.sf.saxon.Transform  -s:testdata/mfstring_tests.xml -xsl:demo_mfstring_e
 </testcases>
 ```
 
+[Saxon XSLT engine](http://saxon.sourceforge.net/)
 
 ### xmp_metadata.xsl
 
@@ -36,4 +37,6 @@ X3D MetadataSet node encoded in XML.
 
 
 java net.sf.saxon.Transform   -s:testdata/sidecar_0001.xmp -xsl:convert_xmp_file.xsl
+
+java net.sf.saxon.Transform   -s:testdata/metadata_0001.xml -xsl:convert_metadata_node.xsl
 
