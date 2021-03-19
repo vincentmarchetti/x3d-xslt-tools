@@ -17,7 +17,7 @@
     </tests>
 </xsl:template>
 
-<xsl:template match="MFString">
+<xsl:template match="mfstring">
     <xsl:variable name="items">
 
         <xsl:call-template name="decode-mfstring">
@@ -25,29 +25,29 @@
         </xsl:call-template>
     
     </xsl:variable>
-    
-    <!-- <xsl:copy-of select="$items"/> -->
-    
+     
     <decoding-test>
         <xsl:copy-of select="."/>
-        <SFStrings>
-            <xsl:for-each select="$items/result/sfstring/text()">
-                <SFString><xsl:copy-of select="."/></SFString>
-            </xsl:for-each>
-        </SFStrings>
+        
+        <decoded-sfstrings>
+        <xsl:for-each select="$items/result/sfstring">
+        <decoded-sfstring><xsl:value-of select="string(.)"/></decoded-sfstring>
+        </xsl:for-each>
+        </decoded-sfstrings>
+        
     </decoding-test>
 </xsl:template>
 
-<xsl:template match="SFStrings">
+<xsl:template match="sfstrings">
     <encoding-test>
         <xsl:copy-of select="."/>
-        <MFString>
+        <encoded-mfstring>
             <xsl:attribute name="value">
             <xsl:call-template name='encode-mfstring'>
-                <xsl:with-param name="sfstrings" select="./SFString"/>
+                <xsl:with-param name="sfstrings" select="./sfstring"/>
             </xsl:call-template>
             </xsl:attribute>
-        </MFString>
+        </encoded-mfstring>
     </encoding-test>
 </xsl:template>
 
