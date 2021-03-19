@@ -10,7 +10,7 @@ extracting list of strings from an MFString value encoded in XML
 
 ### demo_mfstring_encoding.xsl
 Script demonstrating use of the mfstring_encoding.xsl templates. This script can be applied to 
-an XML file containing <mfstring> and <sfstrings> test cases as shown in this example:
+an XML file containing mfstring and sfstrings test cases as shown in this example:
 
 
 ```xml
@@ -30,8 +30,7 @@ Result of applying the demo_mfstring_encoding.xsl script will be an XML file; fo
 in the input there will be a decomposition into string values ; and for each <sfstrings> element in the
 input there will be the mfstring encoding as an attribute value.
 
-A command line invocation of this script, using the [Saxon XSLT engine](http://saxon.sourceforge.net/) is
-[Saxon XSLT engine](http://saxon.sourceforge.net/)
+A command line invocation of this script, using the [Saxon XSLT engine](http://saxon.sourceforge.net/) is 
 ```
 java net.sf.saxon.Transform  -s:testdata/mfstring_tests.xml -xsl:demo_mfstring_encoding.xsl
 ```
