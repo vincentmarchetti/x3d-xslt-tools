@@ -147,25 +147,4 @@ Example call when the XMP packet is enclosed in a 'sidecar' file.
     </xsl:if>
 </xsl:template>
 
-
-<xsl:template match="MetadataSet[@name='XMP']">
-    <rdf:Description>
-        <xsl:apply-templates mode="xmp-dec" select="*"/>
-    </rdf:Description>
-</xsl:template>
-
-
-<xsl:template mode="xmp-dec" match="MetadataString[@containerField='value']">
-    <xsl:variable name="value">
-        <xsl:call-template name="decode-mfstring">
-            <xsl:with-param name="mfstring" select="./@value"/>
-        </xsl:call-template>    
-    </xsl:variable>
-
-    <xsl:element name="{./@name}" namespace="{./@reference}">
-    <xsl:value-of select="string($value/sfstring)"/>
-    </xsl:element>
-</xsl:template>
-
-<xsl:template mode="xmp-dec" match="*"/>
 </xsl:stylesheet>
